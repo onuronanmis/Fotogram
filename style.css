@@ -44,9 +44,9 @@ h1{
     color: white;
     font-size: clamp(3rem, 2.75rem + 0.833vw, 3.5rem);
      font-family: 'Figtree';
-  font-style: normal;
-  font-weight: 800;
-  padding-bottom: clamp(3.5rem, 0.25rem + 10.833vw, 10rem);
+    font-style: normal;
+     font-weight: 800;
+    padding-bottom: clamp(3.5rem, 0.25rem + 10.833vw, 10rem);
 }
 .gallery{
     display: flex;
@@ -68,6 +68,73 @@ h1{
 .gallery img:hover{
     transform: scale(0.9);
 }
+
+.open_dialog{
+    width: 700px;
+    height: 680px;
+    padding-top: clamp(2rem, -0.5rem + 8.333vw, 3.5rem);
+    padding-bottom: clamp(2rem, -0.5rem + 8.333vw, 3.5rem);
+    padding-left: clamp(1rem, -4rem + 16.667vw, 4rem);
+    padding-right: clamp(1rem, -4rem + 16.667vw, 4rem);
+    background-color: rgba(9, 33, 42, 1);
+    border-radius: 40px;
+    border: none;
+    margin: auto;
+
+}
+
+.dialog_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.image_title{
+    color: white;
+    font-size: 24px;
+     font-family: 'Figtree';
+     font-style: normal;
+     font-weight: 700;
+}
+.close_dialog{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    
+}
+
+.image-center{
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+}
+
+.image-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(3rem, 1.4rem + 8vw, 3.5rem);
+    margin-top: 40px;
+}
+
+.previous-image,
+.next-image{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.counter{
+    color: white;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
 
 footer{
     display: flex;
