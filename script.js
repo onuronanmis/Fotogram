@@ -18,6 +18,8 @@ let currentImage = 0;
 //onload init
 function init(){
     renderimages();
+    document.getElementById("next-image").addEventListener("click", nextImages);
+    document.getElementById("previous-image").addEventListener("click", previousImage);
 
 }
 
@@ -73,7 +75,17 @@ function nextImages() {
     }
     showImage();
 }
-document.getElementById("next-image").addEventListener("click", nextImages);
+
+// links klick
+
+function previousImage() {
+    currentImage--;
+
+    if (currentImage <= 0 ) {
+        currentImage = photoimages.length -1;
+    }
+    showImage()
+}
 
 
 
