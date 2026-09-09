@@ -95,6 +95,7 @@ h1{
      font-family: 'Figtree';
      font-style: normal;
      font-weight: 700;
+     text-transform: uppercase;
 }
 .close_dialog{
     background-color: transparent;

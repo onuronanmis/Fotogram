@@ -17,12 +17,16 @@ let currentImage = 0;
 
 //onload init
 function init(){
-    renderimages();
+    renderimages();  
     document.getElementById("next-image").addEventListener("click", nextImages);
     document.getElementById("previous-image").addEventListener("click", previousImage);
     document.getElementById("close_dialog").addEventListener("click", closeDialog);
     document.getElementById("open_dialog").addEventListener("click", closeDialogOutside);
-
+    document.getElementById("gallery").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.target.click();
+    }
+});
 }
 
 
@@ -36,22 +40,19 @@ function renderimages(){
         
         container.innerHTML += /*html*/`
         <figure>
-            <img tabindex="0" src="./assets/img/${photoimages[index]}"
+            <img tabindex="0" 
+            src="./assets/img/${photoimages[index]}"
             alt="${photoimages[index]}"
             onclick = "openDialog(${index})"
-            onkeydown="openDialogWithEnter(event, ${index})"
             >
         </figure>
         
         `
         }
+
+
     }
 
-    function openDialogWithEnter(event,index) {
-        if (event.key === "Enter") {
-            openDialog(index);
-        }
-    }
 
 // dialog öfnen
 
