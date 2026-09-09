@@ -20,7 +20,7 @@ function init(){
     renderimages();
     document.getElementById("next-image").addEventListener("click", nextImages);
     document.getElementById("previous-image").addEventListener("click", previousImage);
-
+    document.getElementById("close_dialog").addEventListener("click", closeDialog);
 }
 
 
@@ -34,7 +34,7 @@ function renderimages(){
         
         container.innerHTML += /*html*/`
         <figure>
-            <img src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
+            <img tabindex="0" src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
         onclick = "openDialog(${index})">
         </figure>
         
@@ -81,10 +81,17 @@ function nextImages() {
 function previousImage() {
     currentImage--;
 
-    if (currentImage <= 0 ) {
+    if (currentImage < 0 ) {
         currentImage = photoimages.length -1;
     }
     showImage()
+}
+
+// dialog schließen
+
+function closeDialog() {
+    document.getElementById("open_dialog").close();
+    
 }
 
 
