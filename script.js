@@ -15,6 +15,15 @@ const photoimages = [
 
 let currentImage = 0;
 
+//onload init
+function init(){
+    renderimages();
+
+}
+
+
+//Galarie anzeigen
+
 function renderimages(){
 
     let container = document.getElementById('gallery');
@@ -28,8 +37,25 @@ function renderimages(){
         </figure>
         
         `
-        
     }
 }
 
-renderimages();
+// dialog öfnen
+
+function openDialog(index) {
+    currentImage = index;
+
+    let dialog = document.getElementById('open_dialog')
+
+    showImage();
+    dialog.showModal()
+}
+
+
+
+
+
+
+
+
+
