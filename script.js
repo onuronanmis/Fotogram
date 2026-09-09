@@ -54,9 +54,9 @@ function openDialog(index) {
 //dialog fenster anzeigen
 
 function showImage(){
-    let title = document.getAnimations("dialog_header");
+    let title = document.getElementById("image_title");
     let image = document.getElementById("image-center");
-    let navigation = document.getElementById("image-navigation");
+    let navigation = document.getElementById("counter");
     
     title.innerHTML = photoimages[currentImage];
     image.src = `./assets/img/${photoimages[currentImage]}`;
