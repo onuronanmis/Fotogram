@@ -63,7 +63,17 @@ function showImage(){
     navigation.innerHTML = (currentImage +1) +" / " + photoimages.length;
 } 
 
+//rechts klick
 
+function nextImages() {
+    currentImage++;
+
+    if (currentImage >= photoimages.length) {
+        currentImage = 0;
+    }
+    showImage();
+}
+document.getElementById("next-image").addEventListener("click", nextImages);
 
 
 
