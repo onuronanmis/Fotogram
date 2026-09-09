@@ -60,11 +60,11 @@ function openDialog(index) {
 function showImage(){
     let title = document.getElementById("image_title");
     let image = document.getElementById("image-center");
-    let navigation = document.getElementById("counter");
+    let counter = document.getElementById("counter");
     
     title.innerHTML = photoimages[currentImage];
     image.src = `./assets/img/${photoimages[currentImage]}`;
-    navigation.innerHTML = (currentImage +1) +" / " + photoimages.length;
+    counter.innerHTML = (currentImage +1) +" / " + photoimages.length;
 } 
 
 //rechts klick
