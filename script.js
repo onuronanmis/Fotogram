@@ -60,8 +60,10 @@ function showImage(){
     
     title.innerHTML = photoimages[currentImage];
     image.src = `./assets/img/${photoimages[currentImage]}`;
-    
+    navigation.innerHTML = (currentImage +1) +" / " + photoimages.length;
 } 
+
+
 
 
 
