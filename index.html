@@ -21,11 +21,26 @@
 
         <section class="gallery" id="gallery"></section>
         
+        <dialog class="open_dialog" id="open_dialog">
+            <div id="dialog_header">
+                <h2 id="image_title"></h2>
+                <button id="close_dialog">x</button>
+            </div>
+            <img id="image-center" src="" alt="Mittlere Bild">
+            <div id="image-navigation">
+                <button id="previous-image"><img src="./assets/icon/Button-left.png" alt="Pgeil links"></button>
+                <p id="counter"></p>
+                <button id="next-image"><img src="assets/icon/Button Right.svg" alt="Pfeil rechts"></button>
+            </div>
+
+        </dialog>
+
+
     </main>
     <footer>
         <img src="assets/icon/Logo DA.png" alt="DA-icon">
         <p>© 2023 Developer Akademie GmbH</p>
     </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
