@@ -21,6 +21,8 @@ function init(){
     document.getElementById("next-image").addEventListener("click", nextImages);
     document.getElementById("previous-image").addEventListener("click", previousImage);
     document.getElementById("close_dialog").addEventListener("click", closeDialog);
+    document.getElementById("open_dialog").addEventListener("click", closeDialogOutside);
+
 }
 
 
@@ -93,8 +95,14 @@ function closeDialog() {
     document.getElementById("open_dialog").close();
     
 }
+// schleißen mit 
 
+function closeDialogOutside(event){
 
+    if (event.target.id === "open_dialog") {
+        closeDialog();
+    }
+}
 
 
 
