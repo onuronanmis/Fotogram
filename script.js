@@ -22,8 +22,11 @@ function renderimages(){
     for (let index = 0; index < photoimages.length; index++) {
         
         container.innerHTML += /*html*/`
-        <img src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
+        <figure>
+            <img src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
         onclick = "openImage(${index})">
+        </figure>
+        
         `
         
     }
