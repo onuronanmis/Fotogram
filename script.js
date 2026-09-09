@@ -33,7 +33,7 @@ function renderimages(){
         container.innerHTML += /*html*/`
         <figure>
             <img src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
-        onclick = "openImage(${index})">
+        onclick = "openDialog(${index})">
         </figure>
         
         `
@@ -51,7 +51,17 @@ function openDialog(index) {
     dialog.showModal()
 }
 
+//dialog fenster anzeigen
 
+function showImage(){
+    let title = document.getAnimations("dialog_header");
+    let image = document.getElementById("image-center");
+    let navigation = document.getElementById("image-navigation");
+    
+    title.innerHTML = photoimages[currentImage];
+} {
+    
+}
 
 
 
