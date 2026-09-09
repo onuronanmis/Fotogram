@@ -36,13 +36,22 @@ function renderimages(){
         
         container.innerHTML += /*html*/`
         <figure>
-            <img tabindex="0" src="./assets/img/${photoimages[index]}" alt="${photoimages[index]}"
-        onclick = "openDialog(${index})">
+            <img tabindex="0" src="./assets/img/${photoimages[index]}"
+            alt="${photoimages[index]}"
+            onclick = "openDialog(${index})"
+            onkeydown="openDialogWithEnter(event, ${index})"
+            >
         </figure>
         
         `
+        }
     }
-}
+
+    function openDialogWithEnter(event,index) {
+        if (event.key === "Enter") {
+            openDialog(index);
+        }
+    }
 
 // dialog öfnen
 
