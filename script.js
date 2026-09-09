@@ -59,9 +59,9 @@ function showImage(){
     let navigation = document.getElementById("image-navigation");
     
     title.innerHTML = photoimages[currentImage];
-} {
+    image.src = `./assets/img/${photoimages[currentImage]}`;
     
-}
+} 
 
 
 
