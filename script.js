@@ -36,7 +36,8 @@ function init(){
     eventListener();
 }
 
-function eventListener(params) {  
+// event listen
+function eventListener() {  
     document.getElementById("next-image").addEventListener("click", nextImages);
     document.getElementById("previous-image").addEventListener("click", previousImage);
     document.getElementById("close_dialog").addEventListener("click", closeDialog);
@@ -58,22 +59,23 @@ function renderimages(){
 
     for (let index = 0; index < photoimages.length; index++) {
         
-        container.innerHTML += /*html*/`
-        <figure>
-            <img tabindex="0" 
-            src="./assets/img/${photoimages[index]}"
-            alt="${photoimages[index]}"
-            onclick = "openDialog(${index})"        >
-        </figure>
-        
-        `
+        container.innerHTML += getNotesHtml(index)
         }
 
 
     }
+// Template Html
 
-function getNotesHtml() {
-    return 
+function getNotesHtml(index) {
+    return /*html*/`
+        <figure>
+            <img tabindex="0" 
+            src="./assets/img/${photoimages[index]}"
+            alt="${photoDiscription[index]}"
+            onclick = "openDialog(${index})"        >
+        </figure>
+        
+        `
 }
 
 
