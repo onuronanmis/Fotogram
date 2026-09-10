@@ -13,11 +13,30 @@ const photoimages = [
     "Winter.webp",
 ];
 
+const photoDiscription  = [
+"Wunderschöne Landschaft in Alaska",
+"Anime-Illustration",
+"Schwarze Wolken",
+"Blauer Vogel auf einem Ast",
+"Hurrikan von oben",
+"Wunderschöner See",
+"Moorente im See",
+"Blick aufs Meer",
+"Schnee Vogel auf einem Stein",
+"Schneeleopardenjunge",
+"Wunder schöne Berglandschaft",
+"Winterlandschaft",
+]
+
 let currentImage = 0;
 
 //onload init
 function init(){
-    renderimages();  
+    renderimages();
+    eventListener();
+}
+
+function eventListener(params) {  
     document.getElementById("next-image").addEventListener("click", nextImages);
     document.getElementById("previous-image").addEventListener("click", previousImage);
     document.getElementById("close_dialog").addEventListener("click", closeDialog);
@@ -27,6 +46,7 @@ function init(){
         event.target.click();
     }
 });
+    
 }
 
 
@@ -43,8 +63,7 @@ function renderimages(){
             <img tabindex="0" 
             src="./assets/img/${photoimages[index]}"
             alt="${photoimages[index]}"
-            onclick = "openDialog(${index})"
-            >
+            onclick = "openDialog(${index})"        >
         </figure>
         
         `
@@ -52,6 +71,11 @@ function renderimages(){
 
 
     }
+
+function getNotesHtml() {
+    return 
+}
+
 
 
 // dialog öfnen
