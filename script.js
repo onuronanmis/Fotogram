@@ -100,7 +100,9 @@ function showImage(){
     
     title.innerHTML = photoimages[currentImage];
     image.src = `./assets/img/${photoimages[currentImage]}`;
+    image.alt = photoDiscription[currentImage];
     counter.innerHTML = (currentImage +1) +" / " + photoimages.length;
+
 } 
 
 //rechts klick
