@@ -1,173 +1,301 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(9, 33, 42, 1);
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-.header-wrapper{
-    display: flex;
-    width: 100%;
-    max-width: 1440px;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 0 20px 140px;
-    
-}
-body{
+
+/* BODY */
+
+body {
     background-color: rgba(6, 23, 30, 1);
 }
-main{
-    
+
+
+/* HEADER */
+
+header {
     display: flex;
-    min-height: 100dvh;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: rgba(9, 33, 42, 1);
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1440px;
+
+    gap: 16px;
+    padding: 20px 0 20px 140px;
+}
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100dvh;
+
     padding-top: clamp(2.5rem, -1.25rem + 12.5vw, 10rem);
     padding-bottom: clamp(2.5rem, -1.25rem + 12.5vw, 10rem);
     padding-left: clamp(0.1rem, -3.5rem + 13.333vw, 8.5rem);
     padding-right: clamp(0.1rem, -3.5rem + 13.333vw, 8.5rem);
+
     text-align: center;
-
-
 }
-h1{
-    color: white;
-    font-size: clamp(3rem, 2.75rem + 0.833vw, 3.5rem);
-     font-family: 'Figtree';
-    font-style: normal;
-     font-weight: 800;
+
+
+/* BUTTON */
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* HEADLINE */
+
+h1 {
     padding-bottom: clamp(3.5rem, 0.25rem + 10.833vw, 10rem);
+
+    color: white;
+
+    font-family: 'Figtree';
+    font-size: clamp(3rem, 2.75rem + 0.833vw, 3.5rem);
+    font-style: normal;
+    font-weight: 800;
 }
-.gallery{
+
+
+/* GALLERY */
+
+.gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: clamp(0.6rem, 0.813rem + 0.208vw, 1rem);
     justify-content: center;
+    flex-wrap: wrap;
+
     max-width: 1200px;
 
+    gap: clamp(0.6rem, 0.813rem + 0.208vw, 1rem);
 }
 
-.gallery img{
+.gallery img {
     width: 150px;
     height: 150px;
-    border-radius: 16px;
+
+    object-fit: cover;
+
     border: 2px solid rgba(18, 70, 88, 1);
+    border-radius: 16px;
+
     cursor: pointer;
-    
 }
-.gallery img:hover{
+
+.gallery img:hover {
     transform: scale(0.9);
 }
 
-.open_dialog{
-    width: 700px;
+
+/* DIALOG */
+
+.open_dialog {
+    width: min(700px, 90%);
     height: 680px;
+
     padding-top: clamp(2rem, -0.5rem + 8.333vw, 3.5rem);
     padding-bottom: clamp(2rem, -0.5rem + 8.333vw, 3.5rem);
     padding-left: clamp(1rem, -4rem + 16.667vw, 4rem);
     padding-right: clamp(1rem, -4rem + 16.667vw, 4rem);
-    background-color: rgba(9, 33, 42, 1);
-    border-radius: 40px;
-    border: none;
+
     margin: auto;
 
+    background-color: rgba(9, 33, 42, 1);
+
+    border: none;
+    border-radius: 40px;
 }
 
-.dialog_header{
+.open_dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* DIALOG HEADER */
+
+.dialog_header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     margin-bottom: 40px;
 }
 
-.image_title{
+.image_title {
     color: white;
-    font-size: 24px;
-     font-family: 'Figtree';
-     font-style: normal;
-     font-weight: 700;
-     text-transform: uppercase;
-}
-.close_dialog{
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 24px;
 
+    font-family: 'Figtree';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+
+    text-transform: uppercase;
 }
 
-.image-center{
+.close_dialog {
+    color: white;
+
+    font-size: 24px;
+}
+
+
+/* BIG IMAGE */
+
+.image-center {
     width: 100%;
     height: 375px;
-    object-fit:contain;
+
+    object-fit: cover;
 }
 
-.image-navigation{
+
+/* IMAGE NAVIGATION */
+
+.image-navigation {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: clamp(2rem, -2.8rem + 24vw, 3.5rem);
     margin-top: 50px;
 }
 
 .previous-image,
-.next-image{
-    background-color: transparent;
-    border: none;
+.next-image {
     cursor: pointer;
 }
 
-.counter{
+.counter {
     min-width: 45px;
+
     color: white;
+
     font-family: 'Figtree';
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+
     text-align: center;
 }
 
 
-footer{
+/* FOOTER */
+
+footer {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
     gap: 16px;
     padding: 36px 0;
+
     background-color: rgba(9, 33, 42, 1);
-     border-radius: 30% 30% 0 0;
+
+    border-radius: 30% 30% 0 0;
 }
-footer>p{
-    font-size: 14px;
+
+footer > p {
     color: white;
+
+    font-size: 14px;
 }
 
-@media screen and (max-width: 479px){
-.header-wrapper{
-    
-    padding: 20px 0;
-    justify-content: center;
-}
-.close_dialog{
-    transform: translateY(-24px);
-}
 
-}
-@media screen and (max-width: 380px){
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+
+    .open_dialog {
+        width: 90%;
+        height: 680px;
+
+        border-radius: 30px;
+    }
+
+    .image-center {
+        height: 300px;
+    }
+
     .image-navigation{
-        gap: 24px;
+        margin-top: 120px;
     }
 }
 
 
+@media screen and (max-width: 479px) {
+
+    .header-wrapper {
+        justify-content: center;
+
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .open_dialog {
+        width: 95%;
+
+        padding: 30px 20px;
+    }
+
+    .dialog_header {
+        margin-bottom: 25px;
+    }
+
+    .image_title {
+        font-size: 18px;
+    }
+
+    .image-center {
+        height: 250px;
+    }
+
+    .image-navigation {
+        margin-top: 200px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+
+    .gallery img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .image-navigation {
+        gap: 24px;
+    }
+
+    .image-center {
+        height: 220px;
+    }
+
+    .image-navigation {
+        margin-top: 220px;
+    }
+
+}

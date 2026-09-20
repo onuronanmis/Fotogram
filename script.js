@@ -68,12 +68,12 @@ function renderimages(){
 
 function getNotesHtml(index) {
     return /*html*/`
-        <figure>
+        <button>
             <img tabindex="0" 
             src="./assets/img/${photoimages[index]}"
             alt="${photoDiscription[index]}"
             onclick = "openDialog(${index})"        >
-        </figure>
+        </button>
         
         `
 }
