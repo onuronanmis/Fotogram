@@ -43,7 +43,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    min-height: 100dvh;
+    min-height: calc(100dvh - 79px - 136px);
 
     padding-top: clamp(2.5rem, -1.25rem + 12.5vw, 10rem);
     padding-bottom: clamp(2.5rem, -1.25rem + 12.5vw, 10rem);
@@ -219,6 +219,7 @@ footer > p {
     color: white;
 
     font-size: 14px;
+    line-height: 16px;
 }
 
 

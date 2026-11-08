@@ -42,11 +42,6 @@ function eventListener() {
     document.getElementById("previous-image").addEventListener("click", previousImage);
     document.getElementById("close_dialog").addEventListener("click", closeDialog);
     document.getElementById("open_dialog").addEventListener("click", closeDialogOutside);
-    document.getElementById("gallery").addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        event.target.click();
-    }
-});
     
 }
 
@@ -68,7 +63,7 @@ function renderimages(){
 
 function getNotesHtml(index) {
     return /*html*/`
-        <button onclick = "openDialog(${index})" >
+        <button class="gallery-button" onclick="openDialog(${index})">
             <img 
             src="./assets/img/${photoimages[index]}"
             alt="${photoDiscription[index]}"
