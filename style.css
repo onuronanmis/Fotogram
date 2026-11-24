@@ -147,7 +147,7 @@ h1 {
     font-family: 'Figtree';
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
 
     text-transform: uppercase;
 }
@@ -193,7 +193,7 @@ h1 {
     font-family: 'Figtree';
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
 
     text-align: center;
 }
@@ -218,8 +218,8 @@ footer {
 footer > p {
     color: white;
 
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 

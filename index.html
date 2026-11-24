@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,16 +21,16 @@
 
         <section class="gallery" id="gallery"></section>
         
-        <dialog class="open_dialog" id="open_dialog">
+        <dialog class="open_dialog" id="open_dialog" aria-labelledby="image_title">
             <div class="dialog_header" id="dialog_header">
                 <h2 class="image_title" id="image_title"></h2>
-                <button class="close_dialog" id="close_dialog">x</button>
+                <button class="close_dialog" id="close_dialog" aria-label="Close dialog">x</button>
             </div>
             <img class="image-center" id="image-center" src="" alt="">
             <div class="image-navigation" id="image-navigation">
-                <button class="previous-image" id="previous-image"><img src="./assets/icon/Button-left.png" alt="Pgeil links"></button>
+                <button class="previous-image" id="previous-image"><img src="./assets/icon/Button-left.png" alt="Pfeil links"></button>
                 <p class="counter" id="counter"></p>
-                <button class="next-image" id="next-image"><img src="assets/icon/Button Right.svg" alt="Pfeil rechts"></button>
+                <button class="next-image" id="next-image"><img src="assets/icon/button-right.svg" alt="Pfeil rechts"></button>
             </div>
 
         </dialog>
@@ -38,7 +38,7 @@
 
     </main>
     <footer>
-        <img src="assets/icon/Logo DA.png" alt="DA-icon">
+        <img src="assets/icon/logo-da.png" alt="DA-icon">
         <p>© 2023 Developer Akademie GmbH</p>
     </footer>
     
